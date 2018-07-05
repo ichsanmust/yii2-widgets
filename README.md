@@ -65,7 +65,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <?= GridView::widget([
-	'id'=>'crud-gridview-ichsanmust',
+	'id'=>'crud-product-ichsanmust',
 	'dataProvider' => $dataProvider,
 	'filterModel' => $searchModel,
 	'columns' => [
@@ -84,10 +84,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php
 	$this->registerJs(
 		   '
-			$("#diseleksi-pjax-crud-gridview").on("pjax:send", function() { // beforeSend
+			$("#pjax-product-gridview").on("pjax:send", function() { // beforeSend
 				$("#loader").show();
 			})
-			$("#diseleksi-pjax-crud-gridview").on("pjax:complete", function() { // complete
+			$("#pjax-product-gridview").on("pjax:complete", function() { // complete
 				$("#loader").hide();
 				$("select").material_select();
 			})
