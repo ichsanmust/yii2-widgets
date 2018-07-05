@@ -60,6 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	\ichsanmust\widgets\Pjax3::begin([  //di pake di sini
 		'id'=>'pjax-product-gridview',
 		'enablePushState'=>false,
+		'timeout'=>100000,
 	]); 
 ?>
 
